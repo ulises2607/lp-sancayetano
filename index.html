@@ -1,216 +1,340 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instituto San Cayetano - Formación Técnica Superior</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1>Instituto San Cayetano</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#carreras" class="nav-link">Carreras</a></li>
-                    <li><a href="#sobre-nosotros" class="nav-link">Nosotros</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li><a href="http://campovirtual.institutosancayetanosalta.com" class="nav-link campus-link" target="_blank">Campus Virtual</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img
+              src="images/logo-instituto.jpg"
+              alt="Logo Instituto San Cayetano"
+            />
+            <h1>Instituto San Cayetano</h1>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#carreras" class="nav-link">Carreras</a></li>
+            <li><a href="#sobre-nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <li>
+              <a
+                href="http://campovirtual.institutosancayetanosalta.com"
+                class="nav-link campus-link"
+                target="_blank"
+                >Campus Virtual</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Formá tu futuro profesional</h1>
-                <p class="hero-subtitle">Instituto Superior de Formación Técnica y Profesional en Salta</p>
-                <div class="hero-buttons">
-                    <a href="#carreras" class="btn btn-primary">Ver Carreras</a>
-                    <a href="http://campovirtual.institutosancayetanosalta.com" class="btn btn-secondary" target="_blank">Acceder al Campus</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-placeholder">
-                    <!-- Placeholder para imagen del instituto -->
-                    <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="400" height="300" fill="#f0f4f8"/>
-                        <text x="200" y="150" text-anchor="middle" fill="#64748b" font-family="Inter" font-size="16">Imagen del Instituto</text>
-                    </svg>
-                </div>
-            </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Formá tu futuro profesional</h1>
+          <p class="hero-subtitle">
+            Instituto Superior de Formación Técnica y Profesional en Salta
+          </p>
+          <div class="hero-buttons">
+            <a href="#carreras" class="btn btn-primary">Ver Carreras</a>
+            <a
+              href="http://campovirtual.institutosancayetanosalta.com"
+              class="btn btn-secondary"
+              target="_blank"
+              >Acceder al Campus</a
+            >
+          </div>
         </div>
+        <div class="hero-image">
+          <div class="hero-placeholder">
+            <img src="images/frente-instituto.jpg" alt="Frente del Instituto San Cayetano" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evento Destacado Section -->
+    <section class="evento-destacado">
+      <div class="container">
+        <div class="evento-banner">
+          <div class="evento-content">
+            <div class="evento-badge">
+              <span>EVENTO DESTACADO</span>
+            </div>
+            <h2>III Congreso de Técnicos en Laboratorio</h2>
+            <p class="evento-lema">
+              "Detrás del diagnóstico, adelante en la ciencia"
+            </p>
+            <p class="evento-descripcion">
+              Una oportunidad única para estudiantes y profesionales del área de
+              laboratorio. Conferencias magistrales, talleres prácticos y
+              networking profesional.
+            </p>
+            <div class="evento-details">
+              <div class="detail-item">
+                <i class="icon-calendar">📅</i>
+                <span><strong>Fecha:</strong> 29 de Agosto</span>
+              </div>
+              <div class="detail-item">
+                <i class="icon-location">📍</i>
+                <span
+                  ><strong>Lugar:</strong> Casa del Bicentenario - Av.
+                  Independencia N° 973</span
+                >
+              </div>
+              <div class="detail-item">
+                <i class="icon-phone">📞</i>
+                <span><strong>Contacto:</strong> (0387) 4223312</span>
+              </div>
+              <div class="detail-item">
+                <i class="icon-users">👥</i>
+                <span
+                  ><strong>Dirigido a:</strong> Estudiantes y
+                  Profesionales</span
+                >
+              </div>
+            </div>
+            <div class="evento-actions">
+              <a href="#" class="btn btn-evento" target="_blank"
+                >Inscribirse al Congreso</a
+              >
+              <a
+                href="mailto:info@institutosancayetanosalta.com"
+                class="btn btn-info"
+                >Más Información</a
+              >
+            </div>
+          </div>
+          <div class="evento-image">
+            <img
+              src="images/congreso-laboratorio.jpg"
+              alt="III Congreso de Técnicos en Laboratorio"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Carreras Section -->
     <section id="carreras" class="carreras">
-        <div class="container">
-            <h2 class="section-title">Nuestras Carreras</h2>
-            <div class="carreras-grid">
-                <div class="carrera-card">
-                    <div class="card-header">
-                        <h3>Educación Secundaria</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Formación integral para jóvenes con orientación técnica y humanística.</p>
-                        <ul>
-                            <li>Modalidad presencial</li>
-                            <li>Duración: 6 años</li>
-                            <li>Título oficial</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="carrera-card">
-                    <div class="card-header">
-                        <h3>Profesorado de Educación Física</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Formación docente especializada en educación física y deportes.</p>
-                        <ul>
-                            <li>Duración: 4 años</li>
-                            <li>Prácticas profesionales</li>
-                            <li>Título habilitante</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="carrera-card">
-                    <div class="card-header">
-                        <h3>Tecnicatura Superior en Laboratorio</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>Formación técnica en análisis clínicos y laboratorio.</p>
-                        <ul>
-                            <li>Duración: 3 años</li>
-                            <li>Laboratorios equipados</li>
-                            <li>Alta inserción laboral</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Nuestras Carreras</h2>
+        <div class="carreras-grid">
+          <div class="carrera-card">
+            <div class="card-header">
+              <h3>Educación Secundaria</h3>
             </div>
+            <div class="card-content">
+              <p>
+                Formación integral para jóvenes con orientación técnica y
+                humanística.
+              </p>
+              <ul>
+                <li>Modalidad presencial</li>
+                <li>Duración: 6 años</li>
+                <li>Título oficial</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carrera-card">
+            <div class="card-header">
+              <h3>Profesorado de Educación Física</h3>
+            </div>
+            <div class="card-content">
+              <p>
+                Formación docente especializada en educación física y deportes.
+              </p>
+              <ul>
+                <li>Duración: 4 años</li>
+                <li>Prácticas profesionales</li>
+                <li>Título habilitante</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="carrera-card">
+            <div class="card-header">
+              <h3>Tecnicatura Superior en Laboratorio</h3>
+            </div>
+            <div class="card-content">
+              <p>Formación técnica en análisis clínicos y laboratorio.</p>
+              <ul>
+                <li>Duración: 3 años</li>
+                <li>Laboratorios equipados</li>
+                <li>Alta inserción laboral</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sobre Nosotros Section -->
     <section id="sobre-nosotros" class="sobre-nosotros">
-        <div class="container">
-            <div class="sobre-nosotros-content">
-                <div class="sobre-nosotros-text">
-                    <h2 class="section-title">Sobre Nosotros</h2>
-                    <p>El Instituto San Cayetano es una institución educativa comprometida con la formación integral de profesionales competentes y éticos, contribuyendo al desarrollo de la región y del país.</p>
-                    <div class="features">
-                        <div class="feature">
-                            <h4>Excelencia Académica</h4>
-                            <p>Programas educativos de alta calidad con docentes especializados.</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Formación Práctica</h4>
-                            <p>Énfasis en la experiencia práctica y la aplicación de conocimientos.</p>
-                        </div>
-                        <div class="feature">
-                            <h4>Campus Virtual</h4>
-                            <p>Plataforma moderna para el aprendizaje a distancia y recursos digitales.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sobre-nosotros-image">
-                    <div class="image-placeholder">
-                        <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="400" height="300" fill="#f0f4f8"/>
-                            <text x="200" y="150" text-anchor="middle" fill="#64748b" font-family="Inter" font-size="16">Campus del Instituto</text>
-                        </svg>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="sobre-nosotros-content">
+          <div class="sobre-nosotros-text">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <p>
+              El Instituto San Cayetano es una institución educativa
+              comprometida con la formación integral de profesionales
+              competentes y éticos, contribuyendo al desarrollo de la región y
+              del país.
+            </p>
+            <div class="features">
+              <div class="feature">
+                <h4>Excelencia Académica</h4>
+                <p>
+                  Programas educativos de alta calidad con docentes
+                  especializados.
+                </p>
+              </div>
+              <div class="feature">
+                <h4>Formación Práctica</h4>
+                <p>
+                  Énfasis en la experiencia práctica y la aplicación de
+                  conocimientos.
+                </p>
+              </div>
+              <div class="feature">
+                <h4>Campus Virtual</h4>
+                <p>
+                  Plataforma moderna para el aprendizaje a distancia y recursos
+                  digitales.
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="sobre-nosotros-image">
+            <div class="image-placeholder">
+              <img src="images/foto2.jpg" alt="Campus del Instituto San Cayetano" />
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Contacto Section -->
     <section id="contacto" class="contacto">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <div class="contacto-content">
-                <div class="contacto-info">
-                    <div class="info-item">
-                        <h4>Dirección</h4>
-                        <p>Salta, Argentina</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>Teléfono</h4>
-                        <p>+54 (387) XXX-XXXX</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>Email</h4>
-                        <p>info@institutosancayetanosalta.com</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>Campus Virtual</h4>
-                        <a href="http://campovirtual.institutosancayetanosalta.com" target="_blank">Acceder al Moodle</a>
-                    </div>
-                </div>
-                <div class="contacto-form">
-                    <form id="contact-form">
-                        <h3>Envíanos un mensaje</h3>
-                        <input type="text" name="nombre" placeholder="Nombre completo" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono">
-                        <select name="carrera" required>
-                            <option value="">Selecciona una carrera</option>
-                            <option value="secundario">Educación Secundaria</option>
-                            <option value="profesorado">Profesorado de Educación Física</option>
-                            <option value="laboratorio">Tecnicatura en Laboratorio</option>
-                        </select>
-                        <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                    </form>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contacto-content">
+          <div class="contacto-info">
+            <div class="info-item">
+              <h4>Dirección</h4>
+              <p>Salta, Argentina</p>
             </div>
+            <div class="info-item">
+              <h4>Teléfono</h4>
+              <p>+54 (387) 4223312</p>
+            </div>
+            <div class="info-item">
+              <h4>Email</h4>
+              <p>tecnico@institutosancayetanosalta.com</p>
+            </div>
+            <div class="info-item">
+              <h4>Campus Virtual</h4>
+              <a
+                href="http://campovirtual.institutosancayetanosalta.com"
+                target="_blank"
+                >Acceder al Moodle</a
+              >
+            </div>
+          </div>
+          <div class="contacto-form">
+            <form id="contact-form">
+              <h3>Envíanos un mensaje</h3>
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Nombre completo"
+                required
+              />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="telefono" placeholder="Teléfono" />
+              <select name="carrera" required>
+                <option value="">Selecciona una carrera</option>
+                <option value="secundario">Educación Secundaria</option>
+                <option value="profesorado">
+                  Profesorado de Educación Física
+                </option>
+                <option value="laboratorio">Tecnicatura en Laboratorio</option>
+              </select>
+              <textarea
+                name="mensaje"
+                placeholder="Mensaje"
+                rows="4"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Instituto San Cayetano</h3>
-                    <p>Formando profesionales comprometidos con el desarrollo de la sociedad.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#carreras">Carreras</a></li>
-                        <li><a href="#sobre-nosotros">Nosotros</a></li>
-                        <li><a href="http://campovirtual.institutosancayetanosalta.com" target="_blank">Campus Virtual</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contacto</h4>
-                    <p>Salta, Argentina</p>
-                    <p>info@institutosancayetanosalta.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Instituto San Cayetano. Todos los derechos reservados.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Instituto San Cayetano</h3>
+            <p>
+              Formando profesionales comprometidos con el desarrollo de la
+              sociedad.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="#carreras">Carreras</a></li>
+              <li><a href="#sobre-nosotros">Nosotros</a></li>
+              <li>
+                <a
+                  href="http://campovirtual.institutosancayetanosalta.com"
+                  target="_blank"
+                  >Campus Virtual</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>Salta, Argentina</p>
+            <p>tecnico@institutosancayetanosalta.com</p>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Instituto San Cayetano. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

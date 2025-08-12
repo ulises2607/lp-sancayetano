@@ -92,13 +92,32 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Aplicar animaciones a las tarjetas
+// Aplicar animaciones a las tarjetas y elementos
 document.querySelectorAll('.carrera-card, .feature, .info-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Animación especial para el evento destacado
+const eventoBanner = document.querySelector('.evento-banner');
+if (eventoBanner) {
+    const eventoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, 200);
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    eventoObserver.observe(eventoBanner);
+}
 
 // Efecto parallax suave para el hero
 window.addEventListener('scroll', () => {
