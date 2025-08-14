@@ -298,12 +298,17 @@
 
 .alias {
   font-family: 'Courier New', monospace;
-  background: #297e93;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 4px;
+  background: #ffffff;
+  color: #297e93;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 2px solid #297e93;
+  box-shadow: 0 2px 8px rgba(41, 126, 147, 0.2);
   display: inline-block;
   margin: 0.5rem 0;
+  letter-spacing: 0.5px;
 }
 
 /* Mensaje de éxito */
