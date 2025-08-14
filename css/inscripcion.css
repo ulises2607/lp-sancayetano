@@ -1,0 +1,467 @@
+/* Estilos específicos para la página de inscripción */
+
+/* Sección principal */
+.inscripcion-section {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #f1f5f9 100%);
+  min-height: 100vh;
+}
+
+.inscripcion-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header del formulario */
+.form-header {
+  background: #297e93;
+  padding: 2rem;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(41, 126, 147, 0.3);
+}
+
+.form-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.form-institute-name {
+  color: #ebf5f6;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.form-event-title {
+  color: #ebf5f6;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.form-event-subtitle {
+  color: #ebf5f6;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Container del formulario */
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-section-title {
+  color: #297e93;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Grupos de formulario */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 25%;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.form-group label::after {
+  content: ":";
+  margin-left: 0.75rem;
+}
+
+.form-input {
+  flex: 1;
+  background: #f4f4f4;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: var(--font-family);
+}
+
+.form-input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 2px #297e93;
+  transform: translateY(-1px);
+}
+
+/* Separadores */
+.form-separator {
+  border-bottom: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Grupo de radio buttons */
+.radio-group {
+  margin: 2rem 0;
+}
+
+.radio-group-title {
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.radio-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.radio-option:hover {
+  background-color: #f3f4f6;
+}
+
+.radio-input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-input:checked {
+  border-color: #297e93;
+  background-color: #297e93;
+}
+
+.radio-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.radio-label {
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Botón de envío */
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #297e93 0%, #1f5f6a 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(41, 126, 147, 0.4);
+}
+
+.submit-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Información de pago */
+.payment-info {
+  margin-top: 2rem;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.payment-icon {
+  width: 24px;
+  height: 24px;
+  background: #297e93;
+  color: white;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.payment-header h4 {
+  color: #374151;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.payment-details p {
+  color: #6b7280;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.payment-details strong {
+  color: #374151;
+}
+
+.whatsapp-info {
+  margin: 1rem 0 !important;
+  padding: 0.75rem;
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  border-radius: 4px;
+}
+
+.bank-info {
+  background: #eff6ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border-left: 4px solid #297e93;
+}
+
+.alias {
+  font-family: 'Courier New', monospace;
+  background: #297e93;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+
+/* Mensaje de éxito */
+.success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.success-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.success-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.success-content h3 {
+  color: #10b981;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.success-content p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.success-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.success-btn:hover {
+  background: #059669;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inscripcion-section {
+    padding: 120px 0 60px;
+  }
+  
+  .form-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .form-title-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-institute-name {
+    font-size: 1rem;
+  }
+  
+  .form-event-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .form-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    text-align: left;
+    min-width: auto;
+    padding-right: 0;
+  }
+  
+  .radio-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .radio-option {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .inscripcion-container {
+    padding: 0 10px;
+  }
+  
+  .form-event-title {
+    font-size: 1.3rem;
+  }
+  
+  .form-event-subtitle {
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    min-width: 160px;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-header,
+.form-container {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.form-container {
+  animation-delay: 0.2s;
+  opacity: 0;
+  animation-fill-mode: both;
+}

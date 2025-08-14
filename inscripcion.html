@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscripción - III Congreso de Técnicos en Laboratorio</title>
+    <link rel="stylesheet" href="css/styles.css?v=2.0" />
+    <link rel="stylesheet" href="css/inscripcion.css?v=2.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img
+              src="images/logo-instituto.jpg?v=2.0"
+              alt="Logo Instituto San Cayetano"
+            />
+            <h1>Instituto San Cayetano</h1>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="index.html#carreras" class="nav-link">Carreras</a></li>
+            <li>
+              <a href="index.html#sobre-nosotros" class="nav-link">Nosotros</a>
+            </li>
+            <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            <li>
+              <a
+                href="http://campovirtual.institutosancayetanosalta.com"
+                class="nav-link campus-link"
+                target="_blank"
+                >Campus Virtual</a
+              >
+            </li>
+          </ul>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Formulario de Inscripción -->
+    <section class="inscripcion-section">
+      <div class="inscripcion-container">
+        <!-- Header del formulario -->
+        <div class="form-header">
+          <div class="form-title-container">
+            <img
+              src="images/logo-instituto.jpg?v=2.0"
+              alt="Logo"
+              class="form-logo"
+            />
+            <h2 class="form-institute-name">INSTITUTO SAN CAYETANO N° 8092</h2>
+          </div>
+          <h1 class="form-event-title">
+            III CONGRESO DE TÉCNICOS EN LABORATORIO
+          </h1>
+          <p class="form-event-subtitle">
+            "Detrás del diagnóstico, adelante en la ciencia"
+          </p>
+        </div>
+
+        <!-- Formulario -->
+        <div class="form-container">
+          <h3 class="form-section-title">FICHA DE INSCRIPCIÓN</h3>
+          <form id="inscripcion-form" class="inscripcion-form">
+            <div class="form-group">
+              <label for="fullname">Nombre y Apellido:</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="bornDate">Fecha de Nacimiento:</label>
+              <input
+                type="date"
+                id="bornDate"
+                name="bornDate"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="dni">D.N.I.:</label>
+              <input
+                type="number"
+                id="dni"
+                name="dni"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="domicilio">Domicilio:</label>
+              <input
+                type="text"
+                id="domicilio"
+                name="domicilio"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="profesion">Profesión:</label>
+              <input
+                type="text"
+                id="profesion"
+                name="profesion"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="estudiante">Estudiante:</label>
+              <input
+                type="text"
+                id="estudiante"
+                name="estudiante"
+                required
+                class="form-input"
+              />
+            </div>
+
+            <!-- Separador -->
+            <div class="form-separator"></div>
+
+            <!-- Tipo de asistente -->
+            <div class="radio-group">
+              <h4 class="radio-group-title">Tipo de participación:</h4>
+              <div class="radio-options">
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="asistente"
+                    name="tipoAsistente"
+                    value="Asistente"
+                    required
+                    class="radio-input"
+                  />
+                  <label for="asistente" class="radio-label">Asistente</label>
+                </div>
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="disertante"
+                    name="tipoAsistente"
+                    value="Disertante"
+                    class="radio-input"
+                  />
+                  <label for="disertante" class="radio-label">Disertante</label>
+                </div>
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    id="poster"
+                    name="tipoAsistente"
+                    value="Presentación de poster"
+                    class="radio-input"
+                  />
+                  <label for="poster" class="radio-label"
+                    >Presentación de poster</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="submit-container">
+              <button type="submit" id="submit-btn" class="submit-btn">
+                <span class="submit-text">Inscribirme</span>
+                <div class="loading-spinner" style="display: none">
+                  <svg class="spinner" viewBox="0 0 32 32">
+                    <path
+                      clip-rule="evenodd"
+                      d="M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Enviando...</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Separador -->
+            <div class="form-separator"></div>
+
+            <!-- Información de pago -->
+            <div class="payment-info">
+              <div class="payment-header">
+                <svg class="payment-icon" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 12l2 2 4-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21 12c0 1.2-.8 2.3-2 2.7-.9.2-2 .2-3 .2H8c-1 0-2.1 0-3-.2-1.2-.4-2-1.5-2-2.7s.8-2.3 2-2.7c.9-.2 2-.2 3-.2h8c1 0 2.1 0 3 .2 1.2.4 2 1.5 2 2.7z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+                <h4>Inversión:</h4>
+              </div>
+              <div class="payment-details">
+                <p><strong>Alumnos:</strong> $10.000</p>
+                <p><strong>Profesionales Técnicos:</strong> $18.000</p>
+                <p><strong>Público en General:</strong> $1.000</p>
+                <p class="whatsapp-info">
+                  <strong>Enviar comprobante por WhatsApp al número:</strong>
+                  +54 9 387 532-1653
+                </p>
+                <div class="bank-info">
+                  <p><strong>Pago por Transferencia:</strong></p>
+                  <p class="alias">
+                    <strong>ALIAS:</strong> insti.sancayetano.mp
+                  </p>
+                  <p><strong>FUNDACIÓN EDUCATIVA SALTA</strong></p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensaje de éxito (oculto inicialmente) -->
+    <div id="success-message" class="success-message" style="display: none">
+      <div class="success-content">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M9 12l2 2 4-4"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <h3>¡Inscripción Exitosa!</h3>
+        <p>
+          Hemos recibido tu inscripción al III Congreso de Técnicos en
+          Laboratorio.
+        </p>
+        <p>Te contactaremos pronto con más detalles.</p>
+        <button onclick="closeSuccessMessage()" class="success-btn">
+          Cerrar
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Instituto San Cayetano</h3>
+            <p>
+              Formando profesionales comprometidos con el desarrollo de la
+              sociedad.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+              <li><a href="index.html#carreras">Carreras</a></li>
+              <li><a href="index.html#sobre-nosotros">Nosotros</a></li>
+              <li>
+                <a
+                  href="http://campovirtual.institutosancayetanosalta.com"
+                  target="_blank"
+                  >Campus Virtual</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contacto</h4>
+            <p>Salta, Argentina</p>
+            <p>tecnico@institutosancayetanosalta.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Instituto San Cayetano. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script src="js/main.js?v=2.0"></script>
+    <script src="js/inscripcion.js?v=2.0"></script>
+  </body>
+</html>
