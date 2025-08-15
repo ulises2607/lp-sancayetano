@@ -1,180 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test API - Congreso</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        .test-section {
-            margin: 20px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px 5px;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        .result {
-            margin-top: 15px;
-            padding: 15px;
-            border-radius: 5px;
-            font-family: monospace;
-            white-space: pre-wrap;
-        }
-        .success {
-            background: #d4edda;
-            border: 1px solid #c3e6cb;
-            color: #155724;
-        }
-        .error {
-            background: #f8d7da;
-            border: 1px solid #f5c6cb;
-            color: #721c24;
-        }
-        .info {
-            background: #d1ecf1;
-            border: 1px solid #bee5eb;
-            color: #0c5460;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+      .test-section {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px 5px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .result {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        white-space: pre-wrap;
+      }
+      .success {
+        background: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+      }
+      .error {
+        background: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+      }
+      .info {
+        background: #d1ecf1;
+        border: 1px solid #bee5eb;
+        color: #0c5460;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>🧪 Test API - III Congreso de Técnicos en Laboratorio</h1>
-        
-        <div class="test-section">
-            <h3>📡 Test 1: Verificar conectividad de la API</h3>
-            <p>Prueba si tu API de Next.js está respondiendo.</p>
-            <button onclick="testAPIConnectivity()">Probar Conectividad</button>
-            <div id="connectivity-result" class="result" style="display: none;"></div>
-        </div>
+      <h1>🧪 Test API - III Congreso de Técnicos en Laboratorio</h1>
 
-        <div class="test-section">
-            <h3>📨 Test 2: Enviar datos de prueba</h3>
-            <p>Envía datos de prueba usando tu email.</p>
-            <button onclick="testEmailSending()">Enviar Email de Prueba</button>
-            <div id="email-result" class="result" style="display: none;"></div>
-        </div>
+      <div class="test-section">
+        <h3>📡 Test 1: Verificar conectividad de la API</h3>
+        <p>Prueba si tu API de Next.js está respondiendo.</p>
+        <button onclick="testAPIConnectivity()">Probar Conectividad</button>
+        <div
+          id="connectivity-result"
+          class="result"
+          style="display: none"
+        ></div>
+      </div>
+
+      <div class="test-section">
+        <h3>📨 Test 2: Enviar datos de prueba</h3>
+        <p>Envía datos de prueba usando tu email.</p>
+        <button onclick="testEmailSending()">Enviar Email de Prueba</button>
+        <div id="email-result" class="result" style="display: none"></div>
+      </div>
     </div>
 
     <script>
-        const API_ENDPOINT = "https://san-cayetano-j7ww3wgv6-ulises-projects-42dfaac0.vercel.app/api/send-mail";
+      const API_ENDPOINT =
+        "https://san-cayetano-j7ww3wgv6-ulises-projects-42dfaac0.vercel.app/api/send-email";
 
-        // Test 1: Verificar conectividad
-        async function testAPIConnectivity() {
-            const resultDiv = document.getElementById('connectivity-result');
-            resultDiv.style.display = 'block';
-            resultDiv.className = 'result info';
-            resultDiv.textContent = 'Probando conectividad...';
+      // Test 1: Verificar conectividad
+      async function testAPIConnectivity() {
+        const resultDiv = document.getElementById("connectivity-result");
+        resultDiv.style.display = "block";
+        resultDiv.className = "result info";
+        resultDiv.textContent = "Probando conectividad...";
 
-            try {
-                const response = await fetch(API_ENDPOINT, {
-                    method: 'GET',
-                    headers: {
-                        'Accept': 'application/json',
-                    }
-                });
+        try {
+          const response = await fetch(API_ENDPOINT, {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+            },
+          });
 
-                resultDiv.className = 'result success';
-                resultDiv.textContent = `✅ Conectividad OK
+          resultDiv.className = "result success";
+          resultDiv.textContent = `✅ Conectividad OK
 Status: ${response.status}
 Status Text: ${response.statusText}
 Headers: ${JSON.stringify([...response.headers.entries()], null, 2)}`;
-
-            } catch (error) {
-                resultDiv.className = 'result error';
-                resultDiv.textContent = `❌ Error de conectividad:
+        } catch (error) {
+          resultDiv.className = "result error";
+          resultDiv.textContent = `❌ Error de conectividad:
 ${error.message}
 
 Esto podría indicar:
 - Problema de CORS
 - API no disponible
 - Error de red`;
-            }
         }
+      }
 
-        // Test 2: Enviar email de prueba
-        async function testEmailSending() {
-            const resultDiv = document.getElementById('email-result');
-            resultDiv.style.display = 'block';
-            resultDiv.className = 'result info';
-            resultDiv.textContent = 'Enviando datos de prueba...';
+      // Test 2: Enviar email de prueba
+      async function testEmailSending() {
+        const resultDiv = document.getElementById("email-result");
+        resultDiv.style.display = "block";
+        resultDiv.className = "result info";
+        resultDiv.textContent = "Enviando datos de prueba...";
 
-            const formData = new FormData();
-            formData.append('fullname', 'Ulises Cappa (Prueba)');
-            formData.append('Email', 'ulisescappa@gmail.com');
-            formData.append('D.N.I.', '12345678');
-            formData.append('bornDate', '1990-01-15');
-            formData.append('Domicilio', 'Salta Capital, Argentina');
-            formData.append('Telefono', '3871234567');
-            formData.append('Profesion', 'Desarrollador Full Stack');
-            formData.append('Estudiante', 'No');
-            formData.append('Tipo de Asistente', 'Profesional');
+        const formData = new FormData();
+        formData.append("fullname", "Ulises Cappa (Prueba)");
+        formData.append("Email", "ulisescappa@gmail.com");
+        formData.append("D.N.I.", "12345678");
+        formData.append("bornDate", "1990-01-15");
+        formData.append("Domicilio", "Salta Capital, Argentina");
+        formData.append("Telefono", "3871234567");
+        formData.append("Profesion", "Desarrollador Full Stack");
+        formData.append("Estudiante", "No");
+        formData.append("Tipo de Asistente", "Profesional");
 
+        try {
+          const response = await fetch(API_ENDPOINT, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          const responseText = await response.text();
+
+          if (response.ok) {
+            let responseData;
             try {
-                const response = await fetch(API_ENDPOINT, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json',
-                    }
-                });
-
-                const responseText = await response.text();
-                
-                if (response.ok) {
-                    let responseData;
-                    try {
-                        responseData = JSON.parse(responseText);
-                        resultDiv.className = 'result success';
-                        resultDiv.textContent = `✅ Email enviado exitosamente!
+              responseData = JSON.parse(responseText);
+              resultDiv.className = "result success";
+              resultDiv.textContent = `✅ Email enviado exitosamente!
 
 Respuesta:
 ${JSON.stringify(responseData, null, 2)}`;
-                    } catch (e) {
-                        resultDiv.className = 'result success';
-                        resultDiv.textContent = `✅ Email enviado (respuesta no JSON):
+            } catch (e) {
+              resultDiv.className = "result success";
+              resultDiv.textContent = `✅ Email enviado (respuesta no JSON):
 ${responseText}`;
-                    }
-                } else {
-                    resultDiv.className = 'result error';
-                    resultDiv.textContent = `❌ Error al enviar:
+            }
+          } else {
+            resultDiv.className = "result error";
+            resultDiv.textContent = `❌ Error al enviar:
 Status: ${response.status}
 Response: ${responseText}`;
-                }
-
-            } catch (error) {
-                resultDiv.className = 'result error';
-                resultDiv.textContent = `❌ Error de red:
+          }
+        } catch (error) {
+          resultDiv.className = "result error";
+          resultDiv.textContent = `❌ Error de red:
 ${error.message}`;
-            }
         }
+      }
     </script>
-</body>
+  </body>
 </html>
