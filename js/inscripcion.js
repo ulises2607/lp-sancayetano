@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadingSpinner = document.querySelector(".loading-spinner");
   const successMessage = document.getElementById("success-message");
 
-  // Configurar Getform.io - Mejor para hosting tradicional como DonWeb
-  const FORM_ENDPOINT = "https://getform.io/f/agdjdvnb"; // Lo configuramos en 2 minutos
+  // Configurar tu API de Next.js
+  const FORM_ENDPOINT = "https://san-cayetano-j7ww3wgv6-ulises-projects-42dfaac0.vercel.app/api/send-mail";
 
   // Manejar envío del formulario
   form.addEventListener("submit", async function (e) {
@@ -24,18 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const formData = new FormData(form);
 
-      // Crear el mensaje de email
-      const emailData = {
-        to: "tecnico@institutosancayetanosalta.com",
-        subject: `III Congreso - Inscripción de ${formData.get("email")}`,
-        message: createEmailMessage(formData),
-      };
-
-      // Enviar con FormSpree o método alternativo
+      // Enviar con tu API de Next.js
       const response = await sendEmail(formData);
 
       if (response.ok) {
-        showSuccessMessage();
+        showSuccessMessage(response.data);
         form.reset();
       } else {
         throw new Error("Error al enviar el formulario");
@@ -165,32 +158,75 @@ Fecha de inscripción: ${new Date().toLocaleString("es-AR")}
         `;
   }
 
-  // Enviar email usando Getform.io (mejor para DonWeb/Ferozo)
+  // Enviar email usando tu API de Next.js
   async function sendEmail(formData) {
     try {
-      console.log("Enviando formulario con Getform...");
+      console.log("🚀 Enviando formulario con tu API de Next.js...");
+
+      // Crear FormData con los nombres de campos específicos de tu API
+      const apiFormData = new FormData();
+      apiFormData.append('fullname', formData.get('fullname'));
+      apiFormData.append('Email', formData.get('email')); // Nota: 'Email' con mayúscula
+      apiFormData.append('D.N.I.', formData.get('dni'));
+      apiFormData.append('bornDate', formData.get('bornDate'));
+      apiFormData.append('Domicilio', formData.get('domicilio'));
+      apiFormData.append('Telefono', formData.get('telefono'));
+      apiFormData.append('Profesion', formData.get('profesion'));
+      apiFormData.append('Estudiante', formData.get('estudiante'));
+      apiFormData.append('Tipo de Asistente', formData.get('tipoAsistente'));
 
       const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
-        body: formData,
+        body: apiFormData,
+        headers: {
+          'Accept': 'application/json',
+        }
       });
 
-      console.log("Getform Response:", response);
+      console.log("API Response:", response);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      // Verificar si hay problema de autenticación
+      if (response.status === 401 || response.status === 403) {
+        throw new Error("Error de autenticación en el servidor. Por favor, contacta al administrador.");
       }
 
-      return { ok: true, response };
+      if (!response.ok) {
+        const contentType = response.headers.get('content-type');
+        let errorData;
+        
+        if (contentType && contentType.includes('application/json')) {
+          errorData = await response.json();
+        } else {
+          // Si no es JSON, podría ser HTML de error de autenticación
+          const textResponse = await response.text();
+          if (textResponse.includes('Authentication Required')) {
+            throw new Error("La API requiere autenticación. Verifica la configuración del servidor.");
+          }
+          errorData = { message: `Error del servidor: ${response.status}` };
+        }
+        
+        console.error("Error response:", errorData);
+        throw new Error(errorData.message || `HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("✅ Success response:", result);
+
+      return { ok: true, response, data: result };
     } catch (error) {
-      console.error("Getform Error:", error);
+      console.error("❌ API Error:", error);
       throw error;
     }
   }
 
   // Mostrar mensaje de éxito
-  function showSuccessMessage() {
+  function showSuccessMessage(responseData = null) {
     successMessage.style.display = "flex";
+
+    // Si hay datos de respuesta, mostrar información adicional
+    if (responseData && responseData.participante) {
+      console.log("Inscripción confirmada para:", responseData.participante);
+    }
 
     // Auto-cerrar después de 10 segundos
     setTimeout(() => {
